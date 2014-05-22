@@ -12,4 +12,5 @@ Table des matières
 
    Installation de Python <install>
    Python, le langage <python>
+   Python, lire l'interpreteur <erreur>
 
