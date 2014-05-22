@@ -4,7 +4,7 @@ Python
 Comment lire les messages d'erreurs
 -----------------------------------
 
-Il est important de bien comprendre l'interpreteur python pour pouvoir lire et débugguer facilement sont programme. Par exemple, le programme suivant contient une erreur.
+Il est important de bien comprendre l'interpréteur python pour pouvoir lire et débugguer facilement ses programmes. Par exemple, le programme suivant contient une erreur.
 
 .. code-block:: python
    :linenos:
@@ -38,17 +38,17 @@ Il renverra un message d'erreur suivant.
    ZeroDivisionError: division by zero
 
 
-Ce message d'erreur est en deux partie.
+Ce message d'erreur est en deux parties.
 
 Traceback
 ~~~~~~~~~
 
-Le Traceback est la première partie du message d'erreur. Il indique ce que le programme a fait peu avant que l'erreur soit lancé. Dans l'exemple précédent, c'est lors de l'appel de **a(2, 0)** que le programme est entré dans le code de la fonction **foo** où est placé la ligne **return a / b** qui lance l'erreur.
+Le Traceback est la première partie du message d'erreur. Il indique ce que le programme a fait peu avant que l'erreur soit lancée. Dans l'exemple précédent, c'est lors de l'appel de **a(2, 0)** que le programme est entré dans le code de la fonction **foo** où est placé la ligne **return a / b** qui lance l'erreur.
 
 Erreur
 ~~~~~~
 
-La dernière ligne est celle qui indique qu'elle est le type d'erreur rencontrer. Dans l'exemple précédent, c'est une erreur de type **ZeroDivisionError** qui a été lancé. L'erreur est aussi souvent accompagné d'un message aidant à comprendre l'erreur. Ici, **division by zero**. On comprend qu'on a essayé de diviser par zéro.
+La dernière ligne est celle qui indique quel est le type d'erreur rencontré. Dans l'exemple précédent, c'est une erreur de type **ZeroDivisionError** qui a été lancée. L'erreur est aussi souvent accompagnée d'un message aidant à comprendre l'erreur. Ici, **division by zero**. On comprend qu'on a essayé de diviser par zéro.
 
 Erreur typique
 --------------
@@ -112,12 +112,12 @@ Vous essayez d'utiliser un objet non itérable comme un itérable. Un int n'a pa
 
    TypeError: can only concatenate tuple (not "int") to tuple
 
-Faire attention à ne pas faire d'opération avec des objets de type différent. Ici on essaye de concaténé (ajouté) un nombre entier à un tuple. Celà n'est pas possible de la sorte.
+Faire attention à ne pas utiliser d'opération avec des objets de type différent. Ici on essaye de concaténer (ajouter) un nombre entier à un tuple. Celà n'est pas possible de la sorte.
 
 SyntaxError
 ~~~~~~~~~~~
 
-Une erreur de syntaxe. Vous remarquerez q'il n'y a pas de traceback puisque l'erreur se produit lors de la première lecture du document par l'interpreteur et non lors de l'execution.
+Une erreur de syntaxe. Vous remarquerez q'il n'y a pas de traceback puisque l'erreur se produit lors de la première lecture du document par l'interpréteur et non lors de l'exécution.
 
 .. code-block:: none
 
@@ -126,7 +126,7 @@ Une erreur de syntaxe. Vous remarquerez q'il n'y a pas de traceback puisque l'er
                ^
    SyntaxError: invalid syntax
 
-Ici la syntaxe est toute croche. Un nom de variable ne peut contenir un espace. Cette erreur est souvent causé par une virgule  ou une parenthèse manquante.
+Ici la syntaxe est toute croche. Un nom de variable ne peut contenir un espace. Cette erreur est souvent causée par une virgule ou une parenthèse manquante.
 
 
 KeyboardInterrupt
@@ -144,4 +144,4 @@ Normalement se produit lorsque vous arretez vous même le programme avec Ctr-C o
 
    KeyboardInterrupt: 
 
-N'est souvent pas la faute de programme, puisque c'est normalement vous qui envoyez cette erreur. Si vous en venez là parce que vous trouvez votre procesus long. Vérifiez que vous n'avez pas de boucle infinie.
+N'est souvent pas la faute du programme, puisque c'est normalement vous qui envoyez cette erreur. Si vous en venez là parce que vous trouvez votre processus trop long. Vérifiez que vous n'avez pas de boucle infinie.
